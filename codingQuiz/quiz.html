@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+<div class="answers">
+    <h2>Q1: What does IDE stand for?</h2>
+    <h3>Please choose one of the following options:</h3>
+    <input type="radio" name="radio">Internet Development Environment<br>
+    <input type="radio" name="radio">Independent Development Environment<br>
+    <input type="radio" name="radio" id="correct1">Integrated Development Environment<br>
+    <input type="radio" name="radio">Intelligent Development Environment<br>
+       <div class="buttons">
+            <input type="button" value="Back" onclick="location.href='index.html'">
+            <input type="button" value="Next" onclick="next(1)"> 
+        </div>
+</div>
+
+
+<div class="answers">
+<h2>Q2: What is syntax?</h2>
+<h3>Please choose one of the following options:</h3>
+<input type="radio" name="radio2" id="correct2">A set of rules for writing in specific programming languages.<br>
+<input type="radio" name="radio2">Another word for debugging code.<br>
+<input type="radio" name="radio2">A programming language.<br>
+<input type="radio" name="radio2">The process of translating source code to machine code.<br>
+        <div class="buttons">
+            <input type="button" value="Previous" onclick="previous(1)">
+            <input type="button" value="Next" onclick="next(2)">
+        </div> 
+</div>
+
+</div> 
+<div class="answers">
+<h2>Q3: A for loop is used to iterate a condition while it is true.</h2>
+<h3>Please choose one of the following options:</h3>
+    <input type="radio" name="radio3">True<br>
+    <input type="radio" name="radio3" id="correct3">False<br>
+        <div class="buttons">
+            <input type="button" value="Previous" onclick="previous(2)">
+            <input type="button" value="Next" onclick="next(3)"> 
+        </div>
+
+</div> 
+
+<div class="answers">
+<h2>Q4: What was the first computer programming language?</h2>
+<h3>Please choose one of the following options:</h3>
+    <input type="radio" name="radio4" id="correct4">FORTRAN<br>
+    <input type="radio" name="radio4">Java<br>
+    <input type="radio" name="radio4" >COBOL<br>
+    <input type="radio" name="radio4">C++<br>
+        <div class="buttons">
+            <input type="button" value="Previous" onclick="previous(3)">
+            <input type="button" value="Next" onclick="next(4)">
+        </div> 
+</div>
+
+<div class="answers">
+    <h2>Q5: Where did Python get its name?</h2>
+    <h3>Please choose one of the following options:</h3>
+        <input type="radio" name="radio5">Just a random name. No story.<br>
+        <input type="radio" name="radio5">The creator loves snakes.<br>
+        <input type="radio" name="radio5" id="correct5">The creator loved the Monty Python TV show.<br>
+        <input type="radio" name="radio5">Because Python uses snake case.<br>
+            <div class="buttons">
+                <input type="button" value="Previous" onclick="previous(4)">
+                <input type="button" onclick="next(5)" value="Submit">
+            </div>       
+</div>
+
+<div class="answers">
+    <h2>You have completed the quiz!</h2>
+<div class="scoreBtn">
+    <button onclick="result()">Get Score!</button><br>
+</div>
+<div id="score"></div>
+<div class="buttons">
+    <input type="button" value="Retake" onclick="location.href='index.html'">
+</div>
+<div id="score"></div>
+
+</div>
+    
+
+    
+  
+    
+<script>
+    document.getElementsByClassName('answers')[0].style.display="block";
+   
+    function next(id) {
+        document.getElementsByClassName("answers")[id-1].style.display="none";
+        document.getElementsByClassName("answers")[id].style.display="block";
+
+    }
+    
+    function previous(id) {
+        document.getElementsByClassName("answers")[id-1].style.display="block";
+        document.getElementsByClassName("answers")[id].style.display="none";
+
+
+    }
+
+    function result() {
+        var score = 0;
+        if (document.getElementById("correct1").checked) {
+            score ++;
+        }
+        if (document.getElementById("correct2").checked) {
+            score ++;
+        }
+        if (document.getElementById("correct3").checked) {
+            score ++;
+        }
+        if (document.getElementById("correct4").checked) {
+            score ++;
+        }
+        if (document.getElementById("correct5").checked) {
+            score ++;
+        }
+        document.getElementById("score").innerHTML= "Your score is "+ score + " out of 5!";
+
+    }
+
+    function toresults() {
+        document.getElementsByClassName("results").style.display="block";
+        document.getElementsByClassName("answers").style.display="none";
+    }
+
+    toresults();
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+body {
+ 
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    background-image: linear-gradient(180deg, rgb(75, 207, 163), rgb(81, 224, 176), rgb(90, 221, 178), rgb(74, 197, 156), rgb(56, 187, 143));
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    margin: 180px 0 200px 0;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 75px;
+    text-align: center;
+
+}
+h2 {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+
+}
+h3 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+h4 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 55px;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    gap: 100px;
+}
+li a{
+    display: inline;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+li a:hover {
+    color: aquamarine;
+}
+
+
+.answers{
+    display: grid;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(58, 151, 120);
+    margin: 60px 400px 60px 400px;
+    padding: 60px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 3%;
+    display: none;
+    font-size: 20px;
+
+
+}
+
+.answers input{
+grid-column: 2;
+
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 25%;
+}
+.buttons input {
+    background: transparent;
+    border: 15px 15px;
+    border-color: white;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 5%;
+    border-style: solid;
+    margin-top: 50px;
+}
+.buttons input:hover{
+color: aquamarine;
+}
+
+.scoreBtn {
+    display: flex;
+    justify-content: center;
+}
+.scoreBtn button {
+    background: transparent;
+    border: 15px 15px;
+    border-color: white;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 5%;
+    border-style: solid;
+    margin-top: 50px;
+}
+button:hover{
+    color: aquamarine;
+}
+
+#score{
+    text-align: center;
+    margin: 70px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.revealBtns {
+    display: grid;
+    gap: 60px;
+    float: left;
+    margin: 50px;
+    background-color: rgb(58, 151, 120);
+    padding: 30px;
+    border-radius: 5px;
+    
+}
+.revealBtns button{
+    background: transparent;
+    border: 15px 15px;
+    border-color: white;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 5%;
+    border-style: solid;
+    margin-top: 0px;
+    
+}
+.revealBtns button:hover{
+    color: aquamarine;
+    
+}
+.info {
+    display: grid;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(58, 151, 120);
+    margin: 170px 400px 220px 400px;
+    padding: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 3%;
+    font-size: 20px;
+}

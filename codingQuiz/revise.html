@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision Sheet</title>
+    <link rel="stylesheet" href="style.css"> 
+
+</head>
+<body>
+    <h4>Cheat Sheet</h4>
+<div class="revealBtns">
+    <button onclick="reveal1()">View Q1 Answers</button>
+    <button onclick="reveal2()">View Q2 Answers</button> 
+    <button onclick="reveal3()">View Q3 Answers</button> 
+    <button onclick="reveal4()">View Q4 Answers</button> 
+    <button onclick="reveal5()">View Q5 Answers</button> 
+</div>
+<div class="info">
+    <h3 id="title">Select an answer you would like to see!</h3>
+    <p id="info"></p>
+</div>
+<script>
+
+function reveal1(id) {
+    document.getElementById("title").innerHTML= "What is an IDE?";
+    document.getElementById("info").innerHTML= "An IDE stands for an Integrated Development Environment and is a tool used to help create software. It comes with many useful tools such as debuggers, code editors, compilers and interpreters to name a few.";
+    document.getElementsByClassName("info")[id-1].style.display="block";
+    document.getElementsByClassName("info")[id].style.display="none";
+
+}
+function reveal2(id) {
+    document.getElementById("title").innerHTML= "What is syntax?";
+    document.getElementById("info").innerHTML= "Just like the normal definition of syntax, the computer programming definition involves the arrangement and rules of how a programming language is formatted and written in. Without the correct syntax, the code will run into errors and syntax is different for every langaugae although some share similarities.  ";
+    document.getElementsByClassName("info")[id-1].style.display="block";
+    document.getElementsByClassName("info")[id].style.display="none";
+
+}
+function reveal3(id) {
+    document.getElementById("title").innerHTML= "What is a for loop?";
+    document.getElementById("info").innerHTML= "A for loop is a type of iteration strategy used to loop over and repeat a block of code a specific amount of times. Contrasting this, a while loop is used to iterate over a block of code while the condition is true.";
+    document.getElementsByClassName("info")[id-1].style.display="block";
+    document.getElementsByClassName("info")[id].style.display="none";
+
+}
+function reveal4(id) {
+    document.getElementById("title").innerHTML= "What is the oldest programming language?";
+    document.getElementById("info").innerHTML= "Released in 1957, the answer is FORTRAN. Fun fact: FORTRAN is an abbreviation for formula transistor.";
+    document.getElementsByClassName("info")[id-1].style.display="block";
+    document.getElementsByClassName("info")[id].style.display="none";
+
+}
+function reveal5(id) {
+    document.getElementById("title").innerHTML= "Where did Python get it's name?";
+    document.getElementById("info").innerHTML= "Python is one of the most popular programming languages out there. Known for it's ease of learning, Python was developed by Guido van Rossum and was named after his favourite television show,   \"Monty Python's Flying Circus\".";
+    document.getElementsByClassName("info")[id-1].style.display="block";
+    document.getElementsByClassName("info")[id].style.display="none";
+
+}
+
+
+</script>
+</body>
+</html>
